@@ -16,5 +16,8 @@ describe("retorna porcentaje", () => {
     it("deberia retornar 8.25 en base al estado CA", () => {
       expect(retornarPorcentaje("CA")).toEqual(8.25);
     });
+    it("deberia retornar 0 si no se selecciona un estado", () => {
+      expect(retornarPorcentaje("Seleccionar estado")).toEqual(0);
+    });
   });
   

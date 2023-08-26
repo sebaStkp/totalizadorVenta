@@ -1,6 +1,6 @@
 function retornarPorcentaje(estado)
 {
-    let result = 0;
+    let result;
     switch(estado){
         case "Seleccionar estado":
             result= 0;
