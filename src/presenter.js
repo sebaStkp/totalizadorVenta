@@ -8,13 +8,17 @@ const seleccion = document.querySelector("#est");
 
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + "Cantidad de items: " +firstNumber +"</p>"  ;
-  div.innerHTML += "<p>"+ "Precio por item: " + secondNumber +"</p>";
-  div.innerHTML += "<p>" + "Estado: "+ seleccion.value + "</p>";
-  div.innerHTML += "<p>" + "Porcentaje de impuesto por estado : "+ retornarPorcentaje(seleccion.value) + "%"+ "</p>";
+  const selecEstado = seleccion.value;
+  if (firstNumber === "" || secondNumber === "" || selecEstado === "") {
+    event.preventDefault(); 
+    alert("Por favor, completa todos los campos requeridos.");
+  } else {
+    event.preventDefault();
+    div.innerHTML = "<p>" + "Cantidad de items: " + firstNumber + "</p>";
+    div.innerHTML += "<p>" + "Precio por item: " + secondNumber + "</p>";
+    div.innerHTML += "<p>" + "Estado: " + selecEstado + "</p>";
+    div.innerHTML += "<p>" + "Porcentaje de impuesto por estado : " + retornarPorcentaje(selecEstado) + "%" + "</p>";
+  }
 });

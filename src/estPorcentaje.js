@@ -1,7 +1,10 @@
 function retornarPorcentaje(estado)
 {
-    let result;
+    let result = 0;
     switch(estado){
+        case "Seleccionar estado":
+            result= 0;
+            break;
         case "UT":
             result= 6.65;
             break;
