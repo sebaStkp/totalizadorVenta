@@ -24,6 +24,6 @@ form.addEventListener("submit", (event) => {
   } else {
     event.preventDefault();
     div.innerHTML += "<p> " + "Descuento: " + descPorcentaje(precioNeto)*100 + "%" + "</p>";
-    div.innerHTML += "<p>" + "Precio total: " + precioTot + "</p>"; 
+    div.innerHTML += "<p>" + "Precio total: " + precioTot + "$" + "</p>"; 
   }
 });
