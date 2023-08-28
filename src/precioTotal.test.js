@@ -13,5 +13,8 @@ describe("Calcula el precio total considerando solo impuesto por estado", () => 
     it("Muestra el precio total pero solo considerando el impuesto por el estado de NV ",() =>{
         expect(calcPrecioTot(800, "NV")).toEqual(864);
     });
+    it("Muestra el precio total pero solo considerando el impuesto por el estado de UT ",() =>{
+        expect(calcPrecioTot(800, "UT")).toEqual(853.2);
+    });
 });
 
