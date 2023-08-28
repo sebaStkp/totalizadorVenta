@@ -1,3 +1,4 @@
+import descPorcentaje from "./descPorcentaje";
 import retornarPorcentaje from "./estPorcentaje";
 import calcPrecioNeto from "./precioNeto";
 import calcPrecioTot from "./precioTotal";
@@ -22,11 +23,7 @@ form.addEventListener("submit", (event) => {
     alert("Por favor, completa todos los campos requeridos.");
   } else {
     event.preventDefault();
-    div.innerHTML = "<p>" + "Cantidad de items: " + cantidadDeItems + "</p>";
-    div.innerHTML += "<p>" + "Precio por item: " + precioPorItem + "</p>";
-    div.innerHTML += "<p>" + "Estado: " + selecEstado + "</p>";
-    div.innerHTML += "<p>" + "Porcentaje de impuesto por estado : " + retornarPorcentaje(selecEstado) + "%" + "</p>";
-    div.innerHTML += "<p>" + "Precio neto: " + precioNeto + "$" + "</p>";
-    div.innerHTML += "<p>" + "Precio total: " + precioTot + "$" + "</p>"; 
+    div.innerHTML += "<p>" + "Descuento: " + descPorcentaje(precioNeto)*100 + "</p>";
+    
   }
 });
