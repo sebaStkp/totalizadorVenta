@@ -16,5 +16,8 @@ describe("Calcula el precio total considerando solo impuesto por estado", () => 
     it("Muestra el precio total pero solo considerando el impuesto por el estado de UT ",() =>{
         expect(calcPrecioTot(800, "UT")).toEqual(853.2);
     });
+    it("Muestra el precio total considerando el impuesto y el descuento correspondiente a 1000 ",() =>{
+        expect(calcPrecioTot(1000, "UT")).toEqual(1096.5);
+    });
 });
 
