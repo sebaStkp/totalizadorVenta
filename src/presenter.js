@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
     alert("Por favor, completa todos los campos requeridos.");
   } else {
     event.preventDefault();
-    div.innerHTML += "<p>" + "Descuento: " + descPorcentaje(precioNeto)*100 + "</p>";
+    div.innerHTML += "<p>" + "Descuento: " + descPorcentaje(precioNeto)*100 + "%" + "</p>";
     
   }
 });
