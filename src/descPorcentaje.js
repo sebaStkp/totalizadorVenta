@@ -1,7 +1,9 @@
 function descPorcentaje(pNeto){
     let result = 0;
-    
-    if(pNeto >= 7000){
+    if(pNeto >= 10000){
+        result= 0.1;
+    }
+    else if(pNeto >= 7000){
         result= 0.07;
     }
     else if(pNeto >= 3000){
